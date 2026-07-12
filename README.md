@@ -64,7 +64,7 @@ await client.close()
 
 ```python
 titles = await client.get_chat_titles()
-print(titles)  # ['ваш чат 1', 'ваш чат 2'...]
+print(titles)  # ['ваш чат про питон 1', 'ваш чат 2'...]
 
 await client.open_chat_by_title("питон")
 answer = await client.ask("продолжи предыдущую мысль")
