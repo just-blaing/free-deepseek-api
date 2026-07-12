@@ -1,0 +1,34 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "free-deepseek-api"
+version = "1.0"
+description = "неофициальный клиент для chat.deepseek.com через браузерную автоматизацию (playwright)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "blaing", email = "just.blaing@gmail.com" }
+]
+keywords = ["deepseek", "chatbot", "playwright", "browser-automation", "unofficial-api"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Internet :: WWW/HTTP :: Browsers",
+    "Intended Audience :: Developers",
+]
+dependencies = [
+    "playwright>=1.40.0",
+]
+
+[project.urls]
+Repository = "https://github.com/just-blaing/free-deepseek-api"
+
+[project.scripts]
+deepseek-register = "free_deepseek_api.register:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/free_deepseek_api"]
